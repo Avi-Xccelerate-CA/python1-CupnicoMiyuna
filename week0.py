@@ -13,6 +13,12 @@
 # HINT: using % operator to find remainder may be helpful
 def dose(needs):
     #YOUR SOLUTION STARTS HERE
-
+    nutri = ()
+    if (sum(needs) < int(501)) and (max(needs) < int(250)):
+        for i in needs:
+            nutri[i] = (round((250-needs[i])/10 - 0.4),(250-needs[i])%10)
+        return nutri
+    else:
+        print("No medicine given")
+print(dose(input("Please enter the patient's data:")))
     #YOUR SOLUTION ENDS HERE
-
